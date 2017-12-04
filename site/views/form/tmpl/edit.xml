@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_AUTHORLIST_AUTHOR_VIEW_FORM_TITLE" option="COM_AUTHORLIST_AUTHOR_VIEW_FORM_OPTION">
+		<message>
+			<![CDATA[COM_AUTHORLIST_AUTHOR_VIEW_FORM_DESC]]>
+		</message>
+	</layout>	
+</metadata>

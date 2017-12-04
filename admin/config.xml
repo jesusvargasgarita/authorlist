@@ -1,0 +1,738 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+
+	<fieldset name="author"
+		label="COM_AUTHORLIST_AUTHOR"
+		description="COM_AUTHORLIST_CONFIG_AUTHOR_SETTINGS_DESC"
+		>
+
+		<field
+			name="author_layout" type="componentlayout"
+			label="JGLOBAL_FIELD_LAYOUT_LABEL"
+			description="JGLOBAL_FIELD_LAYOUT_DESC"
+			default="_:default"
+			menuitems="true"
+			extension="com_authorlist"
+			view="author"
+		/>
+
+		<field name="show_category_filter"
+			type="radio"
+			class="btn-group" default="0"
+			label="COM_AUTHORLIST_CATEGORY_FILTER_LABEL"
+			description="COM_AUTHORLIST_CATEGORY_FILTER_DESC">
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+		</field>
+		
+		<field name="show_author_select" type="radio"
+			class="btn-group"
+			label="COM_AUTHORLIST_AUTHOR_SELECT"
+			description="COM_AUTHORLIST_AUTHOR_SELECT_DESC"
+			default="1"
+		>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+			
+		<field name="show_author_name" type="list"
+			label="COM_AUTHORLIST_SHOW_AUTHOR_NAME"
+			description="COM_AUTHORLIST_SHOW_AUTHOR_NAME_DESC"
+			default="2"
+		>
+			<option value="1">JGLOBAL_USERNAME</option>
+			<option value="2">COM_AUTHORLIST_AUTHOR_NAME</option>
+		</field>		
+
+		<field name="show_email" type="radio"
+			class="btn-group"
+				label="JGLOBAL_EMAIL"
+				description="COM_AUTHORLIST_FIELD_PARAMS_AUTHOR_E_MAIL_DESC"
+				default="1"
+			>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+		</field>
+
+		<field name="show_author_description"
+			type="radio"
+			class="btn-group"
+			default="1"
+			label="COM_AUTHORLIST_AUTHOR_DESCRIPTION"
+			description="COM_AUTHORLIST_SHOW_AUTHOR_DESCRIPTION_DESC">
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+		</field>
+
+		<field name="show_author_image"
+			type="radio"
+			class="btn-group"
+			default="1"
+			label="COM_AUTHORLIST_AUTHOR_IMAGE"
+			description="COM_AUTHORLIST_SHOW_AUTHOR_IMAGE_DESC">
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+		</field>
+
+		<field name="show_author_edit"
+			type="radio"
+			class="btn-group"
+			default="1"
+			label="COM_AUTHORLIST_AUTHOR_EDIT"
+			description="COM_AUTHORLIST_SHOW_AUTHOR_EDIT_DESC">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+		</field>
+
+		<field name="show_no_articles" type="radio"
+			class="btn-group"
+			label="COM_AUTHORLIST_NO_ARTICLES_LABEL"
+			description="COM_AUTHORLIST_NO_ARTICLES_DESC"
+			default="1"
+			>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+		
+		<field name="catid" type="category" extension="com_content"
+			multiple="true" size="5"
+			label="COM_AUTHORLIST_CHOOSE_CATEGORIES_LABEL"
+			description="COM_AUTHORLIST_CHOOSE_CATEGORIES_DESC"
+		>
+		</field>
+		
+		<field name="category_mode"
+			type="radio"
+			class="btn-group"
+			default="1"
+			label="COM_AUTHORLIST_CHOOSE_CATEGORIES_MODE_LABEL"
+			description="COM_AUTHORLIST_CHOOSE_CATEGORIES_MODE_DESC">
+			<option 
+				value="1">COM_AUTHORLIST_OPTION_INCLUDE_VALUE</option>
+			<option 
+				value="0">COM_AUTHORLIST_OPTION_EXCLUDE_VALUE</option>
+		</field>
+		
+		<field name="orderby_pri"
+			type="list"
+			default="none"
+			label="JGLOBAL_CATEGORY_ORDER_LABEL"
+			description="JGLOBAL_CATEGORY_ORDER_DESC">
+			<option
+				value="none">JGLOBAL_NO_ORDER</option>
+			<option
+				value="alpha">JGLOBAL_TITLE_ALPHABETICAL</option>
+			<option
+				value="ralpha">JGLOBAL_TITLE_REVERSE_ALPHABETICAL</option>
+			<option
+				value="order">JGLOBAL_CATEGORY_MANAGER_ORDER</option>
+		</field>
+
+		<field name="orderby_sec"
+			type="list"
+			default="rdate"
+			label="JGLOBAL_Article_Order_Label"
+			description="JGLOBAL_Article_Order_Desc">
+			<option
+				value="rdate">JGLOBAL_MOST_RECENT_FIRST</option>
+			<option
+				value="date">JGLOBAL_OLDEST_FIRST</option>
+			<option
+				value="alpha">JGLOBAL_TITLE_ALPHABETICAL</option>
+			<option
+				value="ralpha">JGLOBAL_TITLE_REVERSE_ALPHABETICAL</option>
+			<option
+				value="author">JGLOBAL_AUTHOR_ALPHABETICAL</option>
+			<option
+				value="rauthor">JGLOBAL_AUTHOR_REVERSE_ALPHABETICAL</option>
+			<option
+				value="hits">JGLOBAL_MOST_HITS</option>
+			<option
+				value="rhits">JGLOBAL_LEAST_HITS</option>
+			<option
+				value="order">JGLOBAL_ARTICLE_MANAGER_ORDER</option>
+		</field>
+
+		<field name="order_date" type="list"
+				default="published"
+				description="JGLOBAL_ORDERING_DATE_DESC"
+				label="JGLOBAL_ORDERING_DATE_LABEL"
+			>
+
+				<option value="created">JGLOBAL_CREATED</option>
+				<option value="modified">JGLOBAL_MODIFIED</option>
+				<option value="published">JPUBLISHED</option>
+			</field>
+
+		<field name="show_archived"
+			type="radio"
+			class="btn-group"
+			default="0"
+			label="COM_AUTHORLIST_FIELD_SHOW_ARCHIVED_LABEL"
+			description="COM_AUTHORLIST_FIELD_SHOW_ARCHIVED_DESC">
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+		</field>
+			
+		<field name="show_pagination"
+			type="list"
+			default="2"
+			label="JGLOBAL_PAGINATION_LABEL"
+			description="JGLOBAL_PAGINATION_DESC">
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+				<option value="2">JGLOBAL_AUTO</option>
+		</field>
+
+		<field name="show_pagination_results"
+			type="radio"
+			class="btn-group"
+			default="1"
+			label="JGLOBAL_PAGINATION_RESULTS_LABEL"
+			description="JGLOBAL_PAGINATION_RESULTS_DESC">
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+		</field>
+		
+	</fieldset>
+	
+	<fieldset name="images"
+		label="COM_AUTHORLIST_IMAGES"
+		description="COM_AUTHORLIST_CONFIG_IMAGES_SETTINGS_DESC"
+		>
+		
+		<field name="resize_image" type="radio" 
+			class="btn-group"
+			default="0"
+			label="COM_AUTHORLIST_FIELD_RESIZE_IMAGE_LABEL"
+			description="COM_AUTHORLIST_FIELD_RESIZE_IMAGE_DESC"
+		>
+			<option value="1">JYES
+			</option>
+			<option value="0">JNO
+			</option>
+		</field>
+		
+		<field name="image_width" type="text" default="180"
+			label="COM_AUTHORLIST_FIELD_IMAGE_WIDTH_LABEL"
+			description="COM_AUTHORLIST_FIELD_IMAGE_WIDTH_DESC"
+		/>
+		
+		<field name="image_height" type="text" default="210"
+			label="COM_AUTHORLIST_FIELD_IMAGE_HEIGHT_LABEL"
+			description="COM_AUTHORLIST_FIELD_IMAGE_HEIGHT_DESC"
+		/>
+
+		<field
+			name="spacer1"
+			type="spacer"
+			hr="true"
+			/>
+		
+		<field name="thumb_image" type="radio" 
+			class="btn-group"
+			default="0"
+			label="COM_AUTHORLIST_FIELD_THUMB_IMAGE_LABEL"
+			description="COM_AUTHORLIST_FIELD_THUMB_IMAGE_DESC"
+		>
+			<option value="1">JYES
+			</option>
+			<option value="0">JNO
+			</option>
+		</field>
+		
+		<field name="thumb_width" type="text" default="90"
+			label="COM_AUTHORLIST_FIELD_THUMB_WIDTH_LABEL"
+			description="COM_AUTHORLIST_FIELD_THUMB_WIDTH_DESC"
+		/>
+		
+		<field name="thumb_height" type="text" default="105"
+			label="COM_AUTHORLIST_FIELD_THUMB_HEIGHT_LABEL"
+			description="COM_AUTHORLIST_FIELD_THUMB_HEIGHT_DESC"
+		/>
+
+		<field
+			name="spacer2"
+			type="spacer"
+			hr="true"
+			/>
+			
+		<field name="image_proportions" type="list" default="bestfit"
+			label="COM_AUTHORLIST_FIELD_IMAGE_PROPORTIONS_LABEL"
+			description="COM_AUTHORLIST_FIELD_IMAGE_PROPORTIONS_DESC"
+		>
+			<option value="bestfit">COM_AUTHORLIST_OPTION_PROP_BEST_FIT</option>
+			<option value="crop">COM_AUTHORLIST_OPTION_PROP_CROP</option>
+			<option value="only_cut">COM_AUTHORLIST_OPTION_PROP_ONLY_CUT</option>
+			<option value="fill">COM_AUTHORLIST_OPTION_PROP_COLOR</option>
+			<option value="transparent">COM_AUTHORLIST_OPTION_PROP_TRANSP</option>
+		</field>
+		
+		<field name="image_type" type="list" default="" 
+			label="COM_AUTHORLIST_FIELD_IMAGE_TYPE_LABEL"
+			description="COM_AUTHORLIST_FIELD_IMAGE_TYPE_DESC"
+		>
+			<option value="">COM_AUTHORLIST_OPTION_IMAGE_TYPE_PRESERVE</option>
+			<option value="png">COM_AUTHORLIST_OPTION_IMAGE_TYPE_PNG</option>
+			<option value="gif">COM_AUTHORLIST_OPTION_IMAGE_TYPE_GIF</option>
+			<option value="jpeg">COM_AUTHORLIST_OPTION_IMAGE_TYPE_JPEG</option>
+		</field>
+				
+		<field name="image_bg" type="text" default="#FFFFFF" 
+			label="COM_AUTHORLIST_FIELD_IMAGE_BACKGROUND_LABEL" 
+			description="COM_AUTHORLIST_FIELD_IMAGE_BACKGROUND_DESC" 
+		/>
+		
+	</fieldset>
+
+	<fieldset name="list_default_parameters"
+		label="JGLOBAL_LIST_LAYOUT_OPTIONS"
+		description="COM_AUTHORLIST_CONFIG_LIST_SETTINGS_DESC"
+		>
+
+		<field name="show_pagination_limit"
+			type="radio"
+			class="btn-group" default="1"
+			label="COM_AUTHORLIST_PAGINATION_LIMIT_LABEL"
+			description="COM_AUTHORLIST_PAGINATION_LIMIT_DESC">
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+		</field>
+		
+			
+		<field name="display_num" type="list"
+				default="10"
+				description="JGLOBAL_NUMBER_ITEMS_LIST_DESC"
+				label="JGLOBAL_NUMBER_ITEMS_LIST_LABEL">
+				<option value="5">J5</option>
+				<option value="10">J10</option>
+				<option value="15">J15</option>
+				<option value="20">J20</option>
+				<option value="25">J25</option>
+				<option value="30">J30</option>
+				<option value="50">J50</option>
+				<option value="100">J100</option>
+				<option value="0">JALL</option>
+		</field>
+
+		<field name="filter_field"
+			type="radio"
+			class="btn-group"
+			default="0"
+			label="JGLOBAL_FILTER_FIELD_LABEL"
+			description="JGLOBAL_FILTER_FIELD_DESC">
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+		</field>
+
+		<field name="show_headings"
+			type="radio"
+			class="btn-group"
+			default="1"
+			label="JGLOBAL_SHOW_HEADINGS_LABEL"
+			description="JGLOBAL_SHOW_HEADINGS_DESC">
+			<option
+				value="0">JHIDE</option>
+			<option
+				value="1">JSHOW</option>
+		</field>
+
+		<field name="list_show_date"
+			type="list"
+			default="created"
+			label="JGLOBAL_SHOW_DATE_LABEL"
+			description="JGLOBAL_SHOW_DATE_DESC">
+				<option value="0">JHIDE</option>
+				<option value="created">JGLOBAL_CREATED</option>
+				<option value="modified">JGLOBAL_MODIFIED</option>
+				<option value="published">JPUBLISHED</option>
+		</field>
+
+		<field name="date_format"
+			type="text"
+			size="15"
+			label="JGLOBAL_DATE_FORMAT_LABEL"
+			description="JGLOBAL_DATE_FORMAT_DESC" />
+
+		<field name="list_show_hits"
+			type="radio"
+			class="btn-group" default="1"
+			label="JGLOBAL_LIST_HITS_LABEL"
+			description="JGLOBAL_LIST_HITS_DESC">
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+		</field>
+		
+		<field name="list_show_rating"
+			type="radio"
+			class="btn-group" default="0"
+			description="COM_AUTHORLIST_LIST_RATING_DESC"
+			label="COM_AUTHORLIST_LIST_RATING_LABEL"
+		>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+		
+		<field name="list_show_category" 
+			type="radio"
+			class="btn-group" default="0"
+			description="JGLOBAL_SHOW_CATEGORY_DESC"
+			label="JGLOBAL_SHOW_CATEGORY_LABEL"
+		>
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+	</fieldset>
+
+	<fieldset name="blog_default_parameters"
+		label="COM_AUTHORLIST_CONFIG_BLOG_SETTINGS_LABEL"
+		description="COM_AUTHORLIST_CONFIG_BLOG_SETTINGS_DESC"
+		>
+
+		<field name="num_leading_articles"
+			type="text"
+			default="1"
+			label="JGLOBAL_NUM_LEADING_ARTICLES_LABEL"
+			description="JGLOBAL_NUM_LEADING_ARTICLES_DESC">
+		</field>
+
+		<field name="num_intro_articles"
+			type="text"
+			default="4"
+			label="JGLOBAL_NUM_INTRO_ARTICLES_LABEL"
+			description="JGLOBAL_NUM_INTRO_ARTICLES_DESC">
+		</field>
+
+		<field name="num_columns"
+			type="text"
+			default="2"
+			label="JGLOBAL_NUM_COLUMNS_LABEL"
+			description="JGLOBAL_NUM_COLUMNS_DESC">
+		</field>
+
+		<field name="num_links"
+			type="text"
+			default="4"
+			label="JGLOBAL_NUM_LINKS_LABEL"
+			description="JGLOBAL_NUM_LINKS_DESC">
+		</field>
+
+		<field name="multi_column_order"
+			type="list"
+			default="0"
+			label="JGLOBAL_MULTI_COLUMN_ORDER_LABEL"
+			description="JGLOBAL_MULTI_COLUMN_ORDER_DESC">
+			<option
+				value="0">JGLOBAL_DOWN</option>
+			<option
+				value="1">JGLOBAL_ACROSS</option>
+		</field>
+		
+		<field
+			name="show_title"
+			type="radio"
+			class="btn-group"
+			default="1"
+			label="JGLOBAL_SHOW_TITLE_LABEL"
+			description="JGLOBAL_SHOW_TITLE_DESC">
+			<option
+				value="0">JHIDE</option>
+			<option
+				value="1">JSHOW</option>
+		</field>
+
+		<field
+			name="link_titles"
+			type="radio"
+			class="btn-group"
+			default="1"
+			label="JGLOBAL_LINKED_TITLES_LABEL"
+			description="JGLOBAL_LINKED_TITLES_DESC">
+			<option
+				value="0">JNO</option>
+			<option
+				value="1">JYES</option>
+		</field>
+
+		<field
+			name="show_intro"
+			type="radio"
+			class="btn-group"
+			default="1"
+			label="JGLOBAL_SHOW_INTRO_LABEL"
+			description="JGLOBAL_SHOW_INTRO_DESC">
+			<option
+				value="0">JHIDE</option>
+			<option
+				value="1">JSHOW</option>
+		</field>
+
+		<field
+			name="show_category"
+			type="radio"
+			class="btn-group"
+			label="JGLOBAL_SHOW_CATEGORY_LABEL"
+			description="JGLOBAL_SHOW_CATEGORY_DESC"
+			default="0">
+			<option
+				value="0">JHIDE</option>
+			<option
+				value="1">JSHOW</option>
+		</field>
+
+		<field
+			name="link_category"
+			type="radio"
+			class="btn-group"
+			label="JGLOBAL_LINK_CATEGORY_LABEL"
+			description="JGLOBAL_LINK_CATEGORY_DESC"
+			default="1">
+			<option
+				value="0">JNO</option>
+			<option
+				value="1">JYES</option>
+		</field>
+
+		<field
+			name="show_create_date"
+			type="radio"
+			class="btn-group"
+			label="JGLOBAL_SHOW_CREATE_DATE_LABEL"
+			description="JGLOBAL_SHOW_CREATE_DATE_DESC"
+			default="1">
+			<option
+				value="0">JHIDE</option>
+			<option
+				value="1">JSHOW</option>
+		</field>
+
+		<field
+			name="show_modify_date"
+			type="radio"
+			class="btn-group"
+			label="JGLOBAL_SHOW_MODIFY_DATE_LABEL"
+			description="JGLOBAL_SHOW_MODIFY_DATE_DESC"
+			default="0">
+			<option
+				value="0">JHIDE</option>
+			<option
+				value="1">JSHOW</option>
+		</field>
+
+		<field
+			name="show_publish_date"
+			type="radio"
+			class="btn-group"
+			label="JGLOBAL_SHOW_PUBLISH_DATE_LABEL"
+			description="JGLOBAL_SHOW_PUBLISH_DATE_DESC"
+			default="0">
+			<option
+				value="0">JHIDE</option>
+			<option
+				value="1">JSHOW</option>
+		</field>
+
+		<field
+			name="show_vote"
+			type="radio"
+			class="btn-group"
+			label="JGLOBAL_SHOW_VOTE_LABEL"
+			description="JGLOBAL_SHOW_VOTE_DESC"
+			default="0">
+			<option
+				value="0">JHIDE</option>
+			<option
+				value="1">JSHOW</option>
+		</field>
+		
+		<field
+			name="show_readmore"
+			type="radio"
+			class="btn-group"
+			label="JGLOBAL_SHOW_READMORE_LABEL"
+			description="JGLOBAL_SHOW_READMORE_DESC"
+			default="1">
+			<option
+				value="0">JHIDE</option>
+			<option
+				value="1">JSHOW</option>
+		</field>
+
+		<field
+			name="show_readmore_title"
+			type="radio"
+			class="btn-group"
+			label="JGLOBAL_SHOW_READMORE_TITLE_LABEL"
+			description="JGLOBAL_SHOW_READMORE_TITLE_DESC"
+			default="0">
+			<option
+				value="0">JHIDE</option>
+			<option
+				value="1">JSHOW</option>
+		</field>
+
+		<field
+			name="readmore_limit"
+			type="text"
+			label="JGLOBAL_SHOW_READMORE_LIMIT_LABEL"
+			description="JGLOBAL_SHOW_READMORE_LIMIT_DESC"
+			default="100"
+		/>
+	
+		<field
+			name="show_hits"
+
+			type="radio"
+			class="btn-group"
+			label="JGLOBAL_SHOW_HITS_LABEL"
+			description="JGLOBAL_SHOW_HITS_DESC"
+			default="0">
+			<option
+				value="0">JHIDE</option>
+			<option
+				value="1">JSHOW</option>
+		</field>
+
+		<field
+			name="show_noauth"
+			type="radio"
+			class="btn-group"
+			default="0"
+			label="JGLOBAL_SHOW_UNAUTH_LINKS_LABEL"
+			description="JGLOBAL_SHOW_UNAUTH_LINKS_DESC">
+			<option
+				value="0">JNO</option>
+			<option
+				value="1">JYES</option>
+		</field>
+		
+		<field
+			name="content_plugins"
+			type="radio"
+			class="btn-group"
+			default="0"
+			label="COM_AUTHORLIST_CONTENT_PLUGINS_LABEL"
+			description="COM_AUTHORLIST_CONTENT_PLUGINS_DESC">
+			<option
+				value="0">JNO</option>
+			<option
+				value="1">JYES</option>
+		</field>
+			
+	</fieldset>
+	
+
+	<fieldset name="authors_default_parameters"
+			description="COM_AUTHORLIST_CONFIG_AUTHORS_SETTINGS_DESC"
+			label="COM_AUTHORLIST_AUTHORS_OPTIONS"
+		>		
+			
+		<field name="authors_order" type="list"
+				default="order"
+				label="COM_AUTHORLIST_FIELD_PARAMS_AUTHOR_AUTHOR_ORDER_LABEL"
+				description="COM_AUTHORLIST_FIELD_PARAMS_AUTHOR_ORDER_COUNT_DESC"
+			>
+			<option
+				value="order">JGLOBAL_ARTICLE_MANAGER_ORDER</option>
+			<option
+				value="asc">JGLOBAL_AUTHOR_ALPHABETICAL</option>
+			<option
+				value="desc">JGLOBAL_AUTHOR_REVERSE_ALPHABETICAL</option>
+		</field>			
+			
+		<field name="show_emails" type="radio"
+			class="btn-group"
+			default="1"
+			label="COM_AUTHORLIST_FIELD_PARAMS_AUTHOR_E_MAILS_LABEL"
+			description="COM_AUTHORLIST_FIELD_PARAMS_AUTHOR_E_MAILS_DESC"
+		>
+		<option value="0">JHIDE</option>
+		<option value="1">JSHOW</option>
+		</field>	
+				
+		<field name="show_articles_count" type="radio"
+			class="btn-group"
+			default="1"
+			label="COM_AUTHORLIST_FIELD_PARAMS_AUTHOR_ARTICLES_COUNT_LABEL"
+			description="COM_AUTHORLIST_FIELD_PARAMS_AUTHOR_ARTICLES_COUNT_DESC"
+		>
+		<option value="0">JHIDE</option>
+		<option value="1">JSHOW</option>
+		</field>			
+				
+		<field name="show_empty_authors" type="radio"
+			class="btn-group"
+			default="0"
+			label="COM_AUTHORLIST_FIELD_PARAMS_SHOW_EMPTY_AUTHORS_LABEL"
+			description="COM_AUTHORLIST_FIELD_PARAMS_SHOW_EMPTY_AUTHORS_DESC"
+		>
+		<option value="0">JHIDE</option>
+		<option value="1">JSHOW</option>
+		</field>			
+	
+	</fieldset>
+	
+	<fieldset name="integration"
+		label="JGLOBAL_INTEGRATION_LABEL"
+		description="COM_AUTHORLIST_CONFIG_INTEGRATION_SETTINGS_DESC"
+		>
+
+		<field
+			name="show_feed_link"
+			type="radio"
+			class="btn-group"
+			default="1"
+			label="JGLOBAL_SHOW_FEED_LINK_LABEL"
+			description="JGLOBAL_SHOW_FEED_LINK_DESC">
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+		</field>
+
+		<field
+			name="feed_summary"
+			type="list"
+			label="JGLOBAL_FEED_SUMMARY_LABEL"
+			description="JGLOBAL_FEED_SUMMARY_DESC"
+			default="0">
+			<option
+				value="0">JGLOBAL_INTRO_TEXT</option>
+			<option
+				value="1">JGLOBAL_FULL_TEXT</option>
+		</field>
+
+		<field
+			name="enable_gplus"
+			type="radio"
+			class="btn-group"
+			default="1"
+			label="COM_AUTHORLIST_FIELD_PARAMS_ENABLE_GPLUS_LABEL"
+			description="COM_AUTHORLIST_FIELD_PARAMS_ENABLE_GPLUS_DESC">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+		</field>
+
+		<field name="alt_gplus_icon"
+			type="media"
+			label="COM_AUTHORLIST_FIELD_PARAMS_ALT_GPLUS_ICON_LABEL"
+			description="COM_AUTHORLIST_FIELD_PARAMS_ALT_GPLUS_ICON_DESC" />
+
+	</fieldset>
+
+	<fieldset
+		name="permissions"
+		label="JCONFIG_PERMISSIONS_LABEL"
+		description="JCONFIG_PERMISSIONS_DESC"
+		>
+
+		<field
+			name="rules"
+			type="rules"
+			label="JCONFIG_PERMISSIONS_LABEL"
+			class="inputbox"
+			validate="rules"
+			filter="rules"
+			component="com_authorlist"
+			section="component" />
+	</fieldset>
+</config>
