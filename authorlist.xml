@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<extension 
+<extension
 	type="component"
 	version="3.0"
 	method="upgrade"
@@ -64,9 +64,9 @@
 		</languages>
 		<images folder="admin">
 			<folder>images</folder>
-		</images>		
+		</images>
 	</administration>
-	<!-- <updateservers>
+	<updateservers>
 			<server type="extension" priority="1" name="Author List">http://www.munditico.com/update/authorlist.xml</server>
-	</updateservers> -->
+	</updateservers>
 </extension>
