@@ -67,6 +67,6 @@
 		</images>
 	</administration>
 	<updateservers>
-			<server type="extension" priority="1" name="Author List">http://www.munditico.com/update/authorlist.xml</server>
+			<server type="extension" priority="1" name="Author List">https://rawgit.com/jesusvargasgarita/authorlist/master/updates.xml</server>
 	</updateservers>
 </extension>
